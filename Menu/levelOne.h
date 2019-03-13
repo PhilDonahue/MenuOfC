@@ -6,21 +6,21 @@ char levelOne(char *);
 
 
 char levelOne(char *lvl) {
-	char choice = -1, choice_status = 0; // 0:²»ºÏ·¨/³õÊ¼Ì¬ 1:ºÏ·¨
+	char choice = -1, choice_status = 0; // 0:ä¸åˆæ³•/åˆå§‹æ€ 1:åˆæ³•
 
 
-	/* ¶ÁÈ¡ÓÃ»§Ñ¡Ôñ */
-	system("cls");
+	/* è¯»å–ç”¨æˆ·é€‰æ‹© */
+	system("cls");      //clsæ¸…é™¤å±å¹•
 	choose:
-	printf("**********ÇëÑ¡ÔñÕÂ½Ú**********\n");
-	printf("±¾Êé¹²13ÕÂ\n");
-	printf("ÊäÈëÊý×ÖÒÔÑ¡Ôñ¶ÔÓ¦ÕÂ½Ú\n");
-	printf("ÊäÈë0ÍË³ö³ÌÐò\n");
+	printf("**********è¯·é€‰æ‹©ç« èŠ‚**********\n");
+	printf("æœ¬ä¹¦å…±13ç« \n");
+	printf("è¾“å…¥æ•°å­—ä»¥é€‰æ‹©å¯¹åº”ç« èŠ‚\n");
+	printf("è¾“å…¥0é€€å‡ºç¨‹åº\n");
 	scanf_s("%hhd", &choice);
 
 
-	/* ´«»ØÓÃ»§Ñ¡Ôñ */
-	(choice >= 0 && choice <= 13) ? (choice_status = 1) : (choice_status = 0); // ÅÐ¶ÏÊäÈëÊÇ·ñºÏ·¨
+	/* ä¼ å›žç”¨æˆ·é€‰æ‹© */
+	(choice >= 0 && choice <= 13) ? (choice_status = 1) : (choice_status = 0); // åˆ¤æ–­è¾“å…¥æ˜¯å¦åˆæ³•
 	if (choice_status) {
 		if (choice == 0) {
 			*lvl = 0;
@@ -31,7 +31,7 @@ char levelOne(char *lvl) {
 		}
 	} else {
 		system("cls");
-		printf("´íÎó£¡ ·Ç·¨ÊäÈë£¡ ÇëÖØÐÂÊäÈë\n");
+		printf("é”™è¯¯ï¼ éžæ³•è¾“å…¥ï¼ è¯·é‡æ–°è¾“å…¥\n");
 		goto choose;
 	}
 }
